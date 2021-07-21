@@ -24,9 +24,7 @@
                     <td>:</td>
                     <td>
                         <select name="category_id" id="category_id">
-                            <%if item.category.id == 0 %>
                             <option value="0" <% if item.category.id == 0 %> selected <%end%> >Uncategorized</option>
-                            <% end %>
                             <% categories.each do |category| %>
                             <option value="<%= category.id %>" <% if item.category.id == category.id %> selected <%end%> > <%= category.name %> </option>
                             <% end %>
@@ -41,7 +39,7 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td><button type="submit">Save Item</button></td>
+                    <td><button type="submit">Save Item</button> | <a href="/">BACK</a></td>
                 </tr>
             </tbody>
         </table>
